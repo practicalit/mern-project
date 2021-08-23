@@ -1,0 +1,19 @@
+{
+  "name": "events-node",
+  "version": "1.0.0",
+  "description": "Events management backend with node and mongo db ",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Practical IT - 240 877 8161",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
