@@ -40,8 +40,9 @@ app.get("/heart-beat", (req, res) => {
   res.json({ message: "dub..dub..dub..dub.." });
 });
 
-//all routers
+//all routers - room for improvement
 require("./routes/events.routes")(app);
+require("./routes/members.routes")(app);
 
 //either use from config or use 3004
 const PORT = process.env.PORT || 3004;
