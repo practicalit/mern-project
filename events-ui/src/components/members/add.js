@@ -8,10 +8,16 @@ import { useState } from "react";
  */
 function MemberAdd(props) {
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const firstNameHandler = (event) => {
       console.log(event.target.value)
     setFirstName(event.target.value);
+  };
+
+  const lastNameHandler = (event) => {
+    console.log(event.target.value)
+    setLastName(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -20,8 +26,8 @@ function MemberAdd(props) {
       console.log("validate the user");
     } else {
       let data = {
-        firstName: firstName,//get from the selected value
-        lastName: "richards",
+        firstName: firstName,
+        lastName: lastName,
         email: "jenny@some.com",
         city: "San Antonio",
         country: "USA",
@@ -49,14 +55,15 @@ function MemberAdd(props) {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="text" placeholder="Password" />
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control
+             onChange={lastNameHandler} type="text" placeholder="Last name" />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>city</Form.Label>
-          <Form.Control placeholder="your city" />
+          <Form.Label>email</Form.Label>
+          <Form.Control id="email" placeholder="Your Email" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridAddress2">

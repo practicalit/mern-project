@@ -22,6 +22,9 @@ function Header() {
               <LinkContainer to="/members">
               <Nav.Link>Members</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/new-features">
+              <Nav.Link>New Features</Nav.Link>
+              </LinkContainer>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <LinkContainer to="/add-member">
                 <NavDropdown.Item>Add Member</NavDropdown.Item>
