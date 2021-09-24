@@ -7,5 +7,6 @@ module.exports = app => {
     router.post("/", members.create);
     router.get("/", members.findAll);
     app.use('/api/members', router);
+    
 
   };

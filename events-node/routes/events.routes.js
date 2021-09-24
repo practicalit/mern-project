@@ -9,4 +9,6 @@ module.exports = app => {
     // Retrieve all Events
     router.get("/", events.findAll);  
     app.use('/api/events', router);
+    app.use('/api/events/attendees/:id', router);
+    
   };

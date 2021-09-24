@@ -1,10 +1,9 @@
 import {
-  Col,
-  Container,
+ Container,
   Nav,
   Navbar,
   NavDropdown,
-  Row,
+  
 } from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap';
 function Header() {
@@ -12,7 +11,7 @@ function Header() {
     <>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Events Management</Navbar.Brand>
+          <Navbar.Brand href="/">Events Management</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -44,10 +43,7 @@ function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Row xs={2} md={4} lg={6}>
-        <Col>1 of 2</Col>
-        <Col>2 of 2</Col>
-      </Row>
+      
       
     </>
   );

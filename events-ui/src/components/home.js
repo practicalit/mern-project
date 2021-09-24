@@ -11,7 +11,7 @@ function Home() {
   const pull = () => {
     let url = `${process.env.REACT_APP_BACKEND_URL}/api/events`;
     axios.get(url).then((res) => {
-      console.log(res.data);
+      //console.log(res.data);
       setEvents(res.data);
     });
   };
@@ -20,9 +20,9 @@ function Home() {
       <h1>Welcome home</h1>
       <Row xs={1} md={1}>
         {events &&
-          events.map((eve) => {
+          events.map((eve, pos) => {
             return (
-              <Col>
+              <Col className ="hello" key={pos}>
                 <Link to={
                     {
                         pathname: "/event-details",

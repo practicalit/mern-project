@@ -72,11 +72,11 @@ function Features() {
       {features &&
         features.map((feature, index) => {
           return (
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id={"heading"+index}>
+            <div className="accordion" id="accordionExample" key={index}>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id={"heading"+index}>
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={"#collapse"+index}
@@ -88,11 +88,11 @@ function Features() {
                 </h2>
                 <div
                   id={"collapse"+index}
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby={"heading"+index}
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     {feature.desc}
                   </div>
                 </div>

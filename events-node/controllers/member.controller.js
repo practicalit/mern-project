@@ -4,7 +4,7 @@ const Members = db.members;
 // Save new Members
 exports.create = (req, res) => {
  // Validate request
- if (!req.body.firstName || !req.body.email) {
+ if (!req.body.firstName  || !req.body.email) {
     res.status(400).send({ message: "Missing information" });
     return;
   }
