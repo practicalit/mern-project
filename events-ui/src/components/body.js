@@ -5,6 +5,7 @@ import Features from "./features";
 import Home from "./home";
 import MemberAdd from "./members/add";
 import MemberList from "./members/list";
+import MemberDetail from "./members/member-detail";
 
 function Body() {
   return (
@@ -22,8 +23,14 @@ function Body() {
         <Route path="/members">
           <MemberList />
         </Route>
+        <Route path="/home" exact>
+          <Home />
+        </Route>
         <Route path="/" exact>
           <Home />
+        </Route>
+        <Route path="/member-detail" exact>
+          <MemberDetail />
         </Route>
       </Switch>
     </>

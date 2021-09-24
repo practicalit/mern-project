@@ -1,11 +1,10 @@
 module.exports = (mongoose) => {
-  const Events = mongoose.model(
-    "events",
+  const Attendees = mongoose.model(
+    "Attendees",
     mongoose.Schema(
       {
-        title: String,
-        description: String,
-        active: Boolean,
+        event: String,
+        attendees: String,
         venue: String,
         startDate: Date,
         endDate: Date,
@@ -13,6 +12,5 @@ module.exports = (mongoose) => {
       { timestamps: true }
     )
   );
-
-  return Events;
+  return Attendees;
 };

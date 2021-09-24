@@ -64,37 +64,35 @@ function Features() {
       title: "Finalize member registration",
       desc: `Creating a member is halfway done, please finalize it by accepting 
       the whole needed information and inserting to the database. You will check 
-      both node and react as needed.`
-    }
+      both node and react as needed.`,
+    },
   ];
   return (
     <>
       {features &&
         features.map((feature, index) => {
           return (
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id={"heading"+index}>
+            <div className="accordion" id="accordionExample" key={index}>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id={"heading" + index}>
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target={"#collapse"+index}
+                    data-bs-target={"#collapse" + index}
                     aria-expanded="false"
-                    aria-controls={"collapse"+index}
+                    aria-controls={"collapse" + index}
                   >
                     {feature.title}
                   </button>
                 </h2>
                 <div
-                  id={"collapse"+index}
-                  class="accordion-collapse collapse"
-                  aria-labelledby={"heading"+index}
+                  id={"collapse" + index}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={"heading" + index}
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    {feature.desc}
-                  </div>
+                  <div className="accordion-body">{feature.desc}</div>
                 </div>
               </div>
             </div>

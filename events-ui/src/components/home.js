@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
-import axios from 'axios';
-import {useState, useEffect} from 'react';
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -20,18 +20,22 @@ function Home() {
       <h1>Welcome home</h1>
       <Row xs={1} md={1}>
         {events &&
-          events.map((eve) => {
+          events.map((eve, pos) => {
             return (
-              <Col>
-                <Link to={
-                    {
-                        pathname: "/event-details",
-                        state: {
-                            eventObject: eve
-                        }
-                    }
-                }>{eve.title}</Link>
-              </Col>
+              <div className="hello" key={pos}>
+                <Col>
+                  <Link
+                    to={{
+                      pathname: "/event-details",
+                      state: {
+                        eventObject: eve,
+                      },
+                    }}
+                  >
+                    {eve.title}
+                  </Link>
+                </Col>
+              </div>
             );
           })}
       </Row>

@@ -3,8 +3,8 @@ const Events = db.events;
 
 // Save new Events
 exports.create = (req, res) => {
- // Validate request
- if (!req.body.title) {
+  // Validate request
+  if (!req.body.title) {
     res.status(400).send({ message: "Title of event can not be empty!" });
     return;
   }
@@ -22,35 +22,34 @@ exports.create = (req, res) => {
   // Save Events in the database
   newEvent
     .save(newEvent)
-    .then(data => {
+    .then((data) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Events."
+          err.message || "Some error occurred while creating the Events.",
       });
     });
 };
 
 // Retrieve all Events from the database.
 exports.findAll = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
-  
-    Events.find(condition)
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving Events."
-        });
+  const title = req.query.title;
+  var condition = title
+    ? { title: { $regex: new RegExp(title), $options: "i" } }
+    : {};
+
+  Events.find(condition)
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || "Some error occurred while retrieving Events.",
       });
-  };
+    });
+};
 
 // Find a single Event with an id
-exports.findOne = (req, res) => {
-  
-};
+exports.findOne = (req, res) => {};

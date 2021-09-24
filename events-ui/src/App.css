@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.card-body{
+  background-color: #61f1fb;
+}
+
+.card-header{
+  color: rgb(0, 81, 255);
+}
